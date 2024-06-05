@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comblains</title>
+</head>
+<body>
+  <h1>Comblains</h1>
+  <ul>
+    <% comblains.forEach(comblains => { %>
+      <li>
+        <p><%= comblains.message %></p>
+      </li>
+    <% }) %>
+    <hr>
+  </ul>
+</body>
+</html>

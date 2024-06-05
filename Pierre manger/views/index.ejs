@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>قائمة العناصر</title>
+</head>
+<body>
+  <h1>قائمة العناصر</h1>
+  <ul>
+    <% items.forEach(item => { %>
+      <li>
+        <h3><%= item.item_name %></h3>
+        <p>السعر: <%= item.price %></p>
+        <img src="<%= item.photo %>">
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>

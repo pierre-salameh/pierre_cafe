@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Edit Item</title>
+</head>
+<body>
+  <h1>Edit Item</h1>
+  <form action="/edit/<%= item.item_name %>" method="post">
+    <label for="price">ID:</label>
+    <input type="number" name="number" id="number" value="<%= item_id %>">
+
+    <label for="price">Price:</label>
+    <input type="text" name="price" id="price" value="<%= price %>">
+
+    <label for="item_ingredients">Ingredients:</label>
+    <input type="text" name="item_ingredients" id="item_ingredients" value="<%= item.item_ingredients %>">
+
+    <label for="type">Type:</label>
+    <input type="text" name="type" id="type" value="<%= item_type %>">
+
+    <button type="submit">Save</button>
+  </form>
+  <h1>Menu</h1>
+  <ul>
+    <% menuItems.forEach(menuItem => { %>
+      <li>
+        <h3><%= menuItem.item_name %> "ID" <%= menuItem.item_id %></h3>
+        <p>Ingredients: <%= menuItem.item_ingredients %></p>
+        <p>Price: <%= menuItem.price %></p>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
